@@ -211,6 +211,12 @@ The main objectives of the project are:
   * YY_SINCE_PROM (Years Since Last Promotion)
     
 * FEAT_TRAINING
+  * SNAPSHOT_MONTH
+  * EMP_ID
+  * TRAIN_HH_6M (Sum of training hours in last 6 months)
+  * AVG_TRAIN_SCORE_6M (Average training assessment score)
+  * CERT_COUNT (Count of completed certifications)
+    
 * FEAT_MONTHLY_SNAPSHOT
 * FEAT_PROD_RISK_FACTORS
 * FEAT_PROD_RISK_PROBAB

@@ -69,15 +69,23 @@ The main objectives of the project are:
 
 ## Data Model:
 
-Fact Tables
+        Fact Tables
+        
         ↓
-Feature Engineering Tables
+                
+        Feature Engineering Tables
+        
         ↓
-Workforce Monthly Snapshot
+                
+        Workforce Monthly Snapshot
+        
         ↓
-Python Machine Learning & Risk Prediction
+                
+        Python Machine Learning & Risk Prediction
+        
         ↓
-Productivity Risk Probability & Driver Attribution
+                
+        Productivity Risk Probability & Driver Attribution
 
 ### Fact Tables:
 

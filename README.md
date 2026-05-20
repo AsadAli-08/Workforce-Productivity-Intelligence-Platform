@@ -348,7 +348,7 @@ The main objectives of the project are:
 
 * FEAT_PROD_RISK_FACTORS (Coefficients of the Logistic Regression Model as generated using ML)
   * FEATURE
-  * COEFF
+  * COEFFICIENT
    
 ## Machine Learning Model:
 

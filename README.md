@@ -10,22 +10,27 @@
 ## Project Architecture:
 
 
-Workforce Data Collection in Oracle DB
-
-### ↓        
-Oracle SQL Data Preparation
-
-↓        
-Feature Engineering using SQL
-
-↓        
-Python Machine Learning Risk Prediction
-
-↓        
-Power BI Data Modeling & Analysis
-
-↓        
-Workforce Producitivity Intelligence Dashboards
+    Workforce Data Collection in Oracle DB
+    
+    ↓        
+    
+    Oracle SQL Data Preparation
+    
+    ↓        
+    
+    Feature Engineering using SQL
+    
+    ↓        
+    
+    Python Machine Learning Risk Prediction
+    
+    ↓        
+    
+    Power BI Data Modeling & Analysis
+    
+    ↓        
+    
+    Workforce Producitivity Intelligence Dashboards
 
 
 ## Data Model:

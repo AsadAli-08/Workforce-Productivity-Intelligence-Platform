@@ -121,8 +121,8 @@ The main objectives of the project are:
   * BONUS
   * INCENTIVE
   * TOTAL SALARY
-  * COMPA_RATIO
-  * SAL_GROWTH
+  * COMPA_RATIO (Employee Salary / Salary Range Midpoint)
+  * SAL_GROWTH (Annual)
     
 * FACT_ENGAGEMENT
 * FACT_PERFORMANCE

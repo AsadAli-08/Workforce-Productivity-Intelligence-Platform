@@ -69,8 +69,20 @@ The main objectives of the project are:
 
 ## Data Model:
 ### Fact Tables:
+* PERF_FACT_ATTENDANCE
+* PERF_FACT_CAREER
+* PERF_FACT_COMPENSATION
+* PERF_FACT_ENGAGEMENT
+* PERF_FACT_PERFORMANCE
+* PERF_FACT_PRODUCTIVITY
+* PERF_FACT_PROMOTION
+* PERF_FACT_TRAINING
+
 ### Dimension Tables:
 ### Feature Tables:
+### Tables generated using Python
+* PERF_PROD_RISK_COEFF
+* PERF_PROD_RISK_PROBAB
 
 ## Machine Learning Model:
 

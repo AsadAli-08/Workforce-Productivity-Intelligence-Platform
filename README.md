@@ -69,14 +69,26 @@ The main objectives of the project are:
 
 ## Data Model:
 ### Fact Tables:
-* FACT_EMP_MASTER
+
+* FACT_EMP_MASTER (Employee Master)
   * EMP_ID (Employee ID)
   * GENDER
   * DOB
   * DOJ
   * DOR
+ 
+* FACT_CAREER (Career Progression of Employees over the years)
+  * EMP_ID
+  * FROM_DT
+  * TO_DT
+  * UNIT
+  * LOCATION
+  * CADRE
+  * GRADE
+  * DEPTT
+  * POSITION
     
-* EMP_SNAP_MONTH
+* FACT_EMP_SNAP_MONTH (Monthly Snapshot of Employee Master data)
   * SNAPSHOT_MONTH
   * EMP_ID
   * DEPTT
@@ -91,9 +103,17 @@ The main objectives of the project are:
   * UNIT
   * LOCATION
     
-* FACT_MONTHLY_SNAPSHOT
-* FACT_ATTENDANCE
-* FACT_CAREER
+* FACT_ATTENDANCE (Monthly attendance details of employees)
+  * EMP_ID
+  * KEY_DATE
+  * WORKING_DAYS
+  * ABSENCE_DAYS
+  * SICK_LEAVES
+  * CASUAL_LEAVES
+  * LATE_LOGINS
+  * EARLY_EXITS
+  * OVERTIME_HH
+
 * FACT_COMPENSATION
 * FACT_ENGAGEMENT
 * FACT_PERFORMANCE
@@ -115,6 +135,7 @@ The main objectives of the project are:
 * PERF_FT_PRODUCTIVITY
 * PERF_FT_PROMOTION
 * PERF_FT_TRAINING
+* FACT_MONTHLY_SNAPSHOT
 
 ## Machine Learning Model:
 

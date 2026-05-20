@@ -68,6 +68,17 @@ The main objectives of the project are:
 
 
 ## Data Model:
+
+Fact Tables
+        ↓
+Feature Engineering Tables
+        ↓
+Workforce Monthly Snapshot
+        ↓
+Python Machine Learning & Risk Prediction
+        ↓
+Productivity Risk Probability & Driver Attribution
+
 ### Fact Tables:
 
 * FACT_EMP_MASTER (Employee Master)
@@ -187,7 +198,7 @@ The main objectives of the project are:
   * Grade_Name
   * Cadre_Name
 
-### Feature Tables:
+### Feature Engineering Tables:
 * FEAT_ATTENDANCE
   * SNAPSHOT_MONTH
   * EMP_ID

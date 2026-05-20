@@ -188,13 +188,26 @@ The main objectives of the project are:
   * Cadre_Name
 
 ### Feature Tables:
-* PERF_FT_ATTENDANCE
-* PERF_FT_PRODUCTIVITY
-* PERF_FT_PROMOTION
-* PERF_FT_TRAINING
-* FACT_MONTHLY_SNAPSHOT
-* FACT_PROD_RISK_FACTORS
-* FACT_PROD_RISK_PROBAB
+* FEAT_ATTENDANCE
+  * SNAPSHOT_MONTH
+  * EMP_ID
+  * OVERTIME_3M_AVG (Rolling overtime 3 month average)
+  * ABSENCE_3M_AVG (Rolling absence 3 month average)
+  * CONS_OVERTIME_MONTHS (Count of consecutive high-overtime months (>20 Hours per month))
+  * LEAVE_SPIKE_FLAG (If 3 month average absence * 1.5 < Absence in current month --> Then 1 Else 0)
+    
+* FEAT_PRODUCTIVITY
+  * SNAPSHOT_MONTH
+  * EMP_ID
+  * PROD_3M_AVG (Rolling 3-month productivity rate average)
+  * PROD_3M_SLOPE (Current prod rate – prod rate 2 months back)/ 3
+  * PROD_VOLATILITY (STDDEV of Productivity Rate over 6 months)
+    
+* FEAT_PROMOTION
+* FEAT_TRAINING
+* FEAT_MONTHLY_SNAPSHOT
+* FEAT_PROD_RISK_FACTORS
+* FEAT_PROD_RISK_PROBAB
 
 ## Machine Learning Model:
 

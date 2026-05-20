@@ -204,6 +204,12 @@ The main objectives of the project are:
   * PROD_VOLATILITY (STDDEV of Productivity Rate over 6 months)
     
 * FEAT_PROMOTION
+  * SNAPSHOT_MONTH
+  * EMP_ID
+  * STAGFLATION (Is years since last promotion > 4 Then 1 Else 0)
+  * PROM_COUNT (Number of Promotions Till Date)
+  * YY_SINCE_PROM (Years Since Last Promotion)
+    
 * FEAT_TRAINING
 * FEAT_MONTHLY_SNAPSHOT
 * FEAT_PROD_RISK_FACTORS

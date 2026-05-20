@@ -146,7 +146,7 @@ The main objectives of the project are:
   * POTENTIAL (Future growth/leadership potential assessment score out of 5)
   * PERF_CHANGE (Difference between current and previous rating)
     
-* FACT_PRODUCTIVITY
+* FACT_PRODUCTIVITY (Monthly Productivity details of employees)
   * EMP_ID
   * KEY_DATE
   * TASKS_ASSIGNED (Number of tasks allocated to employee)
@@ -158,8 +158,18 @@ The main objectives of the project are:
   * PRODUC_HOURS (Actual productive work hours) 
   * UTILISE_RATE (PRODUCTIVE_HOURS / AVAILABLE_WORK_HOURS) * 100
       
-* FACT_PROMOTION
-* FACT_TRAINING
+* FACT_PROMOTION (Employee Promotion Details)
+  * EMP_ID
+  * PROMOTION_DATE
+  
+* FACT_TRAINING  (Employee Training Details)
+  * EMP_ID
+  * KEY_DATE
+  * TRAINING_ID
+  * HOURS (Total learning duration completed)
+  * SCORE (Assessment/evaluation score achieved in training)
+  * COMPLETED (Indicates whether certification was successfully completed)
+    
 * FACT_EMP_SNAP_MONTH
 * FACT_PROD_RISK_FACTORS
 * FACT_PROD_RISK_PROBAB

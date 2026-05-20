@@ -170,10 +170,6 @@ The main objectives of the project are:
   * SCORE (Assessment/evaluation score achieved in training)
   * COMPLETED (Indicates whether certification was successfully completed)
     
-* FACT_EMP_SNAP_MONTH
-* FACT_PROD_RISK_FACTORS
-* FACT_PROD_RISK_PROBAB
-
 ### Dimension Tables:
 * DIM_MONTHS
 * DIM_UNIT
@@ -186,6 +182,8 @@ The main objectives of the project are:
 * PERF_FT_PROMOTION
 * PERF_FT_TRAINING
 * FACT_MONTHLY_SNAPSHOT
+* FACT_PROD_RISK_FACTORS
+* FACT_PROD_RISK_PROBAB
 
 ## Machine Learning Model:
 

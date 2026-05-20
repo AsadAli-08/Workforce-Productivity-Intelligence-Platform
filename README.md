@@ -147,6 +147,17 @@ The main objectives of the project are:
   * PERF_CHANGE (Difference between current and previous rating)
     
 * FACT_PRODUCTIVITY
+  * EMP_ID
+  * KEY_DATE
+  * TASKS_ASSIGNED (Number of tasks allocated to employee)
+  * TASKS_COMPLETED (Number of tasks successfully completed)
+  * PROD_RATE (TASKS_COMPLETED / TASKS_ASSIGNED) * 100
+  * TIMELINESS (On-Time Tasks / TASKS_COMPLETED) * 100
+  * ERROR_RATE (Errored Tasks / TASKS_COMPLETED) * 100
+  * WORK_HOURS
+  * PRODUC_HOURS (Actual productive work hours) 
+  * UTILISE_RATE (PRODUCTIVE_HOURS / AVAILABLE_WORK_HOURS) * 100
+      
 * FACT_PROMOTION
 * FACT_TRAINING
 * FACT_EMP_SNAP_MONTH

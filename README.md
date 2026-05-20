@@ -70,6 +70,12 @@ The main objectives of the project are:
 ## Data Model:
 ### Fact Tables:
 * FACT_EMP_MASTER
+  * EMP_ID
+  * GENDER
+  * DOB
+  * DOJ
+  * DOR
+    
 * EMP_SNAP_MONTH
 * FACT_MONTHLY_SNAPSHOT
 * FACT_ATTENDANCE

@@ -4,6 +4,22 @@
 
 
 ## Objectives:
+The goal of this project is to build an end-to-end workforce productivity intelligence platform that helps organizations better understand workforce performance, identify productivity risks, and support data-driven workforce decisions.
+
+The project focuses on combining workforce analytics, machine learning, and interactive dashboards to move beyond traditional HR reporting and provide deeper operational and strategic insights.
+
+The main objectives of the project are:
+
+* Analyze workforce productivity across different business units, grades, and workforce segments
+* Identify workforce patterns and operational factors influencing productivity performance
+* Predict productivity deterioration risk using machine learning techniques
+* Understand the key drivers contributing to workforce productivity risk
+* Build explainable and interpretable workforce risk models using Logistic Regression
+* Develop executive dashboards for workforce monitoring and operational decision-making
+* Identify workforce hotspots requiring intervention and performance improvement
+* Analyze workforce capability, learning participation, and career progression trends
+* Measure workforce readiness and long-term capability sustainability
+* Create a modern enterprise-style workforce intelligence solution using SQL, Python, and Power BI
 
 ## Tools & Technologies:
 

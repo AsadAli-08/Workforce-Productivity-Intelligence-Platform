@@ -209,3 +209,124 @@
                                   + 1 AND Last_day(m.snapshot_month)
        GROUP  BY m.snapshot_month,
                  m.emp_id 
+
+## FACT_MONTHLY_SNAPSHOT
+
+       SELECT m.snapshot_month,
+       Substr(Standard_hash(m.emp_id, 'SHA256'), 11, 10)      AS emp_id,
+       ( CASE
+           WHEN m.gender = 'M' THEN 1
+           ELSE 0
+         END )                                                AS gender,
+       m.tenure_yy,
+       m.age_yy,
+       m.cadre,
+       m.grade,
+       m.unit,
+       m.location,
+       m.doj,
+       m.dor,
+       prom.yy_since_prom,
+       prom.stagflation,
+       Round(( prom.prom_count / Nullif(m.tenure_yy, 0) ), 2) AS career_velocity
+       ,
+       prod.tasks_assigned,
+       prod.tasks_completed,
+       prod.prod_rate,
+       prod.timeliness,
+       prod.error_rate,
+       prod.work_hours,
+       prod.utilise_rate,
+       prod.produc_hours,
+       CASE
+         WHEN prod.prod_rate >= 90
+              AND prod.timeliness >= 90
+              AND prod.error_rate <= 3 THEN 1
+         ELSE 0
+       END                                                    AS high_prod_flag,
+       perf.rating,
+       perf.kpi,
+       perf.goal_perc,
+       perf.mgr_rating,
+       perf.potential,
+       perf.perf_change,
+       sal.basic,
+       sal.bonus,
+       sal.incentive,
+       sal.total,
+       sal.compa_ratio,
+       sal.sal_growth,
+       eng.engage_score,
+       eng.burn_score,
+       eng.well_score,
+       eng.manager_score,
+       eng.culture_score,
+       eng.workload_score,
+       att.working_days,
+       att.absence_days,
+       att.sick_leaves,
+       att.casual_leaves,
+       att.late_logins,
+       att.early_exits,
+       att.overtime_hh,
+       train.train_hh_6m,
+       train.avg_train_score_6m,
+       train.cert_count,
+       prod_ft.prod_3m_avg,
+       prod_ft.prod_3m_slope,
+       prod_ft.prod_volatility,
+       CASE
+         WHEN prod.prod_rate < 70 THEN 1
+         WHEN prod_ft.prod_3m_slope < 0
+              AND prod_ft.prod_volatility > 15 THEN 1
+         WHEN prod.error_rate > 10 THEN 1
+         ELSE 0
+       END                                                    AS prod_risk_flag,
+       att_ft.overtime_3m_avg,
+       att_ft.absence_3m_avg,
+       att_ft.cons_overtime_months,
+       att_ft.leave_spike_flag,
+       CASE
+         WHEN att_ft.overtime_3m_avg > 25
+              AND eng.burn_score > 70 THEN 1
+         WHEN eng.workload_score > 80
+              AND att_ft.absence_3m_avg > 3 THEN 1
+         WHEN att_ft.leave_spike_flag = 1 THEN 1
+         ELSE 0
+       END                                                    AS
+       burnout_risk_flag,
+       comp_ft.pay_growth_trend,
+       comp_ft.comp_stag_flag
+FROM   perf_emp_snap_month m
+       left outer join perf_ft_promotion prom
+                    ON m.snapshot_month = prom.snapshot_month
+                       AND m.emp_id = prom.emp_id
+       left outer join perf_fact_productivity prod
+                    ON m.snapshot_month = prod.key_date
+                       AND m.emp_id = prod.emp_id
+       left outer join perf_fact_performance perf
+                    ON m.snapshot_month >= perf.from_dt
+                       AND m.snapshot_month <= perf.to_dt
+                       AND m.emp_id = perf.emp_id
+       left outer join perf_fact_compensation sal
+                    ON m.snapshot_month = sal.key_date
+                       AND m.emp_id = sal.emp_id
+       left outer join perf_fact_engagement eng
+                    ON m.snapshot_month >= eng.from_dt
+                       AND m.snapshot_month <= eng.to_dt
+                       AND m.emp_id = eng.emp_id
+       left outer join perf_fact_attendance att
+                    ON m.snapshot_month = att.key_date
+                       AND m.emp_id = att.emp_id
+       left outer join perf_ft_training train
+                    ON m.snapshot_month = train.snapshot_month
+                       AND m.emp_id = train.emp_id
+       left outer join perf_ft_productivity prod_ft
+                    ON m.snapshot_month = prod_ft.snapshot_month
+                       AND m.emp_id = prod_ft.emp_id
+       left outer join perf_ft_attendance att_ft
+                    ON m.snapshot_month = att_ft.snapshot_month
+                       AND m.emp_id = att_ft.emp_id
+       left outer join perf_ft_compensation comp_ft
+                    ON m.snapshot_month = comp_ft.snapshot_month
+                       AND m.emp_id = comp_ft.emp_id 

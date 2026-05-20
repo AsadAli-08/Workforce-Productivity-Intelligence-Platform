@@ -114,7 +114,16 @@ The main objectives of the project are:
   * EARLY_EXITS
   * OVERTIME_HH
 
-* FACT_COMPENSATION
+* FACT_COMPENSATION (Monthly compensation details of employees)
+  * EMP_ID
+  * KEY_DATE
+  * BASIC
+  * BONUS
+  * INCENTIVE
+  * TOTAL SALARY
+  * COMPA_RATIO
+  * SAL_GROWTH
+    
 * FACT_ENGAGEMENT
 * FACT_PERFORMANCE
 * FACT_PRODUCTIVITY

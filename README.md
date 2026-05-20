@@ -1,6 +1,17 @@
 # Workforce-Productivity-Intelligence-Platform
 
 ## Project Overview:
+Organizations today generate large volumes of workforce and operational data, but much of this information is often used only for basic reporting and historical analysis. This project was developed to explore how workforce data can be transformed into actionable business intelligence that supports productivity improvement, workforce planning, and operational decision-making.
+
+The Workforce Productivity Intelligence Platform is an end-to-end analytics project built using Oracle SQL, Python, and Power BI. The project combines workforce analytics, machine learning, and executive dashboarding to analyze workforce productivity, identify operational performance patterns, and predict productivity risk across the organization.
+
+The solution uses workforce indicators such as engagement, overtime, attendance, career progression, learning participation, and compensation trends to understand the factors influencing workforce productivity and long-term workforce sustainability.
+
+A Logistic Regression machine learning model was developed to predict productivity deterioration risk and identify the major workforce conditions contributing to that risk. The project also includes employee-level driver attribution to improve explainability and support operational decision-making.
+
+The Power BI dashboards were designed using a modern enterprise-style approach inspired by executive workforce intelligence platforms. The dashboards provide visibility into workforce productivity, operational performance, workforce risk drivers, intervention priorities, and workforce capability readiness.
+
+Overall, the project aims to show how organizations can move beyond traditional HR reporting and use workforce intelligence to support more proactive and strategic decision-making.
 
 
 ## Objectives:

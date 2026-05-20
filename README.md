@@ -172,9 +172,20 @@ The main objectives of the project are:
     
 ### Dimension Tables:
 * DIM_MONTHS
+  * SNAPSHOT_MONTH
+    
 * DIM_UNIT
+  * Unit_Code
+  * Unit_Name
+    
 * DIM_LOCATION
+  * Location_Code
+  * Location_Name
+    
 * DIM_GRADE
+  * Grade_Code
+  * Grade_Name
+  * Cadre_Name
 
 ### Feature Tables:
 * PERF_FT_ATTENDANCE

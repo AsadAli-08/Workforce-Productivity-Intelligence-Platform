@@ -1,79 +1,89 @@
 # Data Validation
 
 ## Check manpower count for each snapshot
-select snapshot_month,count(*)
-from PERF_FACT_MONTHLY_SNAPSHOT
-group by snapshot_month
-order by snapshot_month;
+    SELECT snapshot_month,
+           Count(*)
+    FROM   perf_fact_monthly_snapshot
+    GROUP  BY snapshot_month
+    ORDER  BY snapshot_month; 
 
 ## Check duplicate emp_id for each snapshot 
-SELECT
-    snapshot_month,
-    COUNT(*) AS total_rows,
-    COUNT(DISTINCT emp_id) AS unique_employees,
-    COUNT(*) - COUNT(DISTINCT emp_id) AS duplicate_count
-FROM perf_fact_monthly_snapshot
-GROUP BY snapshot_month
-HAVING COUNT(*) > COUNT(DISTINCT emp_id)
-ORDER BY snapshot_month;
+    SELECT snapshot_month,
+           Count(*)                          AS total_rows,
+           Count(DISTINCT emp_id)            AS unique_employees,
+           Count(*) - Count(DISTINCT emp_id) AS duplicate_count
+    FROM   perf_fact_monthly_snapshot
+    GROUP  BY snapshot_month
+    HAVING Count(*) > Count(DISTINCT emp_id)
+    ORDER  BY snapshot_month; 
 
 ## Primary Key NULL Check
-select count(*) as null_primary_keys
-from perf_fact_monthly_snapshot
-where snapshot_month is null or emp_id is null;
+    SELECT Count(*) AS null_primary_keys
+    FROM   perf_fact_monthly_snapshot
+    WHERE  snapshot_month IS NULL
+            OR emp_id IS NULL; 
 
 ## Date Range Validation
-select 
-    min(snapshot_month) as min_date,
-    max(snapshot_month) as max_date 
-from perf_fact_monthly_snapshot;
+    SELECT Min(snapshot_month) AS min_date,
+           Max(snapshot_month) AS max_date
+    FROM   perf_fact_monthly_snapshot; 
 
 ## Missing Snapshot Months
-select 
-    emp_id,
-    snapshot_month as curr_month,
-    lag(snapshot_month,1) over ( partition by emp_id order by snapshot_month) as prev_month,
-    months_between(snapshot_month,lag(snapshot_month,1) over ( partition by emp_id order by snapshot_month) ) as month_diff
-from perf_fact_monthly_snapshot;
+    SELECT emp_id,
+           snapshot_month                                               AS
+           curr_month,
+           Lag(snapshot_month, 1)
+             over (
+               PARTITION BY emp_id
+               ORDER BY snapshot_month)                                 AS
+           prev_month,
+           Months_between(snapshot_month, Lag(snapshot_month, 1)
+                                            over (
+                                              PARTITION BY emp_id
+                                              ORDER BY snapshot_month)) AS
+           month_diff
+    FROM   perf_fact_monthly_snapshot; 
 
 ## CONSISTENCY CHECKS
 
 ### Tasks Completed Cannot Exceed Assigned
-select count(*)
-from perf_fact_monthly_snapshot
-where tasks_completed > tasks_assigned;
-Total Compensation Validation
-select count(*)
-from perf_fact_monthly_snapshot
-where basic + bonus + incentive > total;
+    SELECT Count(*)
+    FROM   perf_fact_monthly_snapshot
+    WHERE  tasks_completed > tasks_assigned;
+
+### Total compensation validation
+    SELECT count(*)
+    FROM   perf_fact_monthly_snapshot
+    WHERE  basic + bonus + incentive > total;
 
 ### Leave Components Validation
-select count(*)
-from perf_fact_monthly_snapshot
-where sick_leaves + casual_leaves > absence_days;
+    SELECT count(*)
+    FROM   perf_fact_monthly_snapshot
+    WHERE  sick_leaves + casual_leaves > absence_days;
 
 ### Productive Hours vs Work Hours
-select count(*)
-from perf_fact_monthly_snapshot
-where produc_hours > work_hours;
+    SELECT count(*)
+    FROM   perf_fact_monthly_snapshot
+    WHERE  produc_hours > work_hours;
 
 ## OUTLIER CHECKS
 ### Extreme Overtime Detection
-SELECT count(*)
-FROM PERF_FACT_MONTHLY_SNAPSHOT
-WHERE OVERTIME_HH > 100;
+    SELECT count(*)
+    FROM   perf_fact_monthly_snapshot
+    WHERE  overtime_hh > 100;
 
 ### Extreme Productivity Detection
-SELECT count(*)
-FROM PERF_FACT_MONTHLY_SNAPSHOT
-WHERE PROD_RATE < 40
-   OR PROD_RATE > 100;
+    SELECT count(*)
+    FROM   perf_fact_monthly_snapshot
+    WHERE  prod_rate < 40
+    OR     prod_rate > 100;
 
 ## TEMPORAL CHECKS
 ### No Records Before DOJ
-SELECT count(*)
-FROM PERF_FACT_MONTHLY_SNAPSHOT
-WHERE last_day(snapshot_month) < doj or last_day(snapshot_month) > dor;
+    SELECT count(*)
+    FROM   perf_fact_monthly_snapshot
+    WHERE  last_day(snapshot_month) < doj
+    OR     last_day(snapshot_month) > dor;
 
 
 ## NULL count analysis

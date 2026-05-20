@@ -17,27 +17,27 @@
 ## Project Architecture:
 
 
-        Workforce Data Collection & Storage
+* Workforce Data Collection & Storage
         
         ↓  
         
-        Oracle SQL Data Preparation & Transformation
+* Oracle SQL Data Preparation & Transformation
         
         ↓  
         
-        Feature Engineering & Workforce KPI Development
+* Feature Engineering & Workforce KPI Development
         
         ↓  
         
-        Python-Based Machine Learning & Risk Prediction
+* Python-Based Machine Learning & Risk Prediction
         
         ↓  
         
-        Power BI Data Modeling & Analytics
+* Power BI Data Modeling & Analytics
         
         ↓  
         
-        Workforce Productivity Intelligence Dashboards
+* Workforce Productivity Intelligence Dashboards
 
 
 ## Data Model:

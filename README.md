@@ -136,6 +136,15 @@ The main objectives of the project are:
   * WORKLOAD_SCORE (Employee perception of workload)
 
 * FACT_PERFORMANCE
+  * EMP_ID
+  * FROM_DT
+  * TO_DT
+  * RATING (Final employee appraisal rating)
+  * KPI_SCORE (Actual KPI / Target KPI) × 100
+  * GOAL_PERC (Percentage of goals completed)
+  * MGR_RATING (Manager-assigned evaluation score)
+  * POTENTIAL (Future growth/leadership potential assessment)
+  * PERF_CHANGE (Difference between current and previous rating)
 * FACT_PRODUCTIVITY
 * FACT_PROMOTION
 * FACT_TRAINING

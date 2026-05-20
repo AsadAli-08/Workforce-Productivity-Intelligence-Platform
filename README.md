@@ -400,6 +400,11 @@ The model generates:
 * top drivers contributing to productivity risk
 
 ## Power BI Dashboard:
+### Executive Overview
+### Workforce Productivity Intelligence
+### Productivity Risk Driver Lab
+### Workforce Action Centre
+### Growth & Capability Intelligence
 
 ## Key Insights:
 

@@ -297,36 +297,36 @@
        burnout_risk_flag,
        comp_ft.pay_growth_trend,
        comp_ft.comp_stag_flag
-FROM   perf_emp_snap_month m
-       left outer join perf_ft_promotion prom
-                    ON m.snapshot_month = prom.snapshot_month
-                       AND m.emp_id = prom.emp_id
-       left outer join perf_fact_productivity prod
-                    ON m.snapshot_month = prod.key_date
-                       AND m.emp_id = prod.emp_id
-       left outer join perf_fact_performance perf
-                    ON m.snapshot_month >= perf.from_dt
-                       AND m.snapshot_month <= perf.to_dt
-                       AND m.emp_id = perf.emp_id
-       left outer join perf_fact_compensation sal
-                    ON m.snapshot_month = sal.key_date
-                       AND m.emp_id = sal.emp_id
-       left outer join perf_fact_engagement eng
-                    ON m.snapshot_month >= eng.from_dt
-                       AND m.snapshot_month <= eng.to_dt
-                       AND m.emp_id = eng.emp_id
-       left outer join perf_fact_attendance att
-                    ON m.snapshot_month = att.key_date
-                       AND m.emp_id = att.emp_id
-       left outer join perf_ft_training train
-                    ON m.snapshot_month = train.snapshot_month
-                       AND m.emp_id = train.emp_id
-       left outer join perf_ft_productivity prod_ft
-                    ON m.snapshot_month = prod_ft.snapshot_month
-                       AND m.emp_id = prod_ft.emp_id
-       left outer join perf_ft_attendance att_ft
-                    ON m.snapshot_month = att_ft.snapshot_month
-                       AND m.emp_id = att_ft.emp_id
-       left outer join perf_ft_compensation comp_ft
-                    ON m.snapshot_month = comp_ft.snapshot_month
-                       AND m.emp_id = comp_ft.emp_id 
+       FROM   perf_emp_snap_month m
+              left outer join perf_ft_promotion prom
+                           ON m.snapshot_month = prom.snapshot_month
+                              AND m.emp_id = prom.emp_id
+              left outer join perf_fact_productivity prod
+                           ON m.snapshot_month = prod.key_date
+                              AND m.emp_id = prod.emp_id
+              left outer join perf_fact_performance perf
+                           ON m.snapshot_month >= perf.from_dt
+                              AND m.snapshot_month <= perf.to_dt
+                              AND m.emp_id = perf.emp_id
+              left outer join perf_fact_compensation sal
+                           ON m.snapshot_month = sal.key_date
+                              AND m.emp_id = sal.emp_id
+              left outer join perf_fact_engagement eng
+                           ON m.snapshot_month >= eng.from_dt
+                              AND m.snapshot_month <= eng.to_dt
+                              AND m.emp_id = eng.emp_id
+              left outer join perf_fact_attendance att
+                           ON m.snapshot_month = att.key_date
+                              AND m.emp_id = att.emp_id
+              left outer join perf_ft_training train
+                           ON m.snapshot_month = train.snapshot_month
+                              AND m.emp_id = train.emp_id
+              left outer join perf_ft_productivity prod_ft
+                           ON m.snapshot_month = prod_ft.snapshot_month
+                              AND m.emp_id = prod_ft.emp_id
+              left outer join perf_ft_attendance att_ft
+                           ON m.snapshot_month = att_ft.snapshot_month
+                              AND m.emp_id = att_ft.emp_id
+              left outer join perf_ft_compensation comp_ft
+                           ON m.snapshot_month = comp_ft.snapshot_month
+                              AND m.emp_id = comp_ft.emp_id 

@@ -124,7 +124,17 @@ The main objectives of the project are:
   * COMPA_RATIO (Employee Salary / Salary Range Midpoint)
   * SAL_GROWTH (Annual)
     
-* FACT_ENGAGEMENT
+* FACT_ENGAGEMENT (Results of Quarterly Engagement Survey)
+  * EMP_ID
+  * FROM_DT
+  * TO_DT
+  * ENGAGEMENT_SCORE (Overall employee engagement level)
+  * BURNOUT_SCORE (Employee burnout or exhaustion level)
+  * WELLBEING_SCORE (Employee physical/mental wellbeing indicator)
+  * MANAGER_FEEDBACK_SCORE (Employee Perception of Manager)
+  * CULTURE_SCORE (Employee perception of organizational culture)
+  * WORKLOAD_SCORE (Employee perception of workload)
+
 * FACT_PERFORMANCE
 * FACT_PRODUCTIVITY
 * FACT_PROMOTION

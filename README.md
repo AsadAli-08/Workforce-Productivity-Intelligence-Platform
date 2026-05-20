@@ -12,24 +12,19 @@
 
 Workforce Data Collection
 
-        ↓
-        
+        ↓        
 Oracle SQL Data Preparation
 
-        ↓
-        
+        ↓        
 Feature Engineering using SQL
 
-        ↓
-        
+        ↓        
 Python Machine Learning Risk Prediction
 
-        ↓
-        
+        ↓        
 Power BI Data Modeling & Analysis
 
-        ↓
-        
+        ↓        
 Workforce Producitivity Intelligence Dashboards
 
 

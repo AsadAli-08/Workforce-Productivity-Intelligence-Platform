@@ -77,6 +77,20 @@ The main objectives of the project are:
   * DOR
     
 * EMP_SNAP_MONTH
+  * SNAPSHOT_MONTH
+  * EMP_ID
+  * DEPTT
+  * TENURE_YY
+  * AGE_YY
+  * CADRE
+  * GRADE
+  * POSITION
+  * GENDER
+  * DOJ
+  * DOR
+  * UNIT
+  * LOCATION
+    
 * FACT_MONTHLY_SNAPSHOT
 * FACT_ATTENDANCE
 * FACT_CAREER

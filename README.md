@@ -373,6 +373,31 @@ The main objectives of the project are:
   * COEFFICIENT
    
 ## Machine Learning Model:
+The primary objective of the model is to:
+
+* predict the probability of future productivity deterioration,
+* identify workforce conditions contributing to productivity risk,
+* support proactive workforce intervention and decision-making.
+
+Instead of focusing only on current productivity levels, the model was designed to identify patterns that may indicate future workforce performance decline.
+
+The model used target variable PROD_RISK_FLAG which represents employees showing elevated productivity deterioration risk based on operational productivity indicators such as:
+* productivity decline trend
+* productivity instability
+* low productivity levels
+* quality deterioration
+* operational inefficiency signals
+
+The project uses a Logistic Regression model. Logistic Regression was selected because it provides:
+* strong interpretability
+* transparent prediction logic
+* explainable feature contribution analysis
+* suitability for workforce analytics and business environments
+
+The model generates:
+* productivity risk probability scores
+* employee-level workforce risk classification
+* top drivers contributing to productivity risk
 
 ## Power BI Dashboard:
 

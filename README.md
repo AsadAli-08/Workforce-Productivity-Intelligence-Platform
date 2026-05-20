@@ -139,12 +139,13 @@ The main objectives of the project are:
   * EMP_ID
   * FROM_DT
   * TO_DT
-  * RATING (Final employee appraisal rating)
+  * RATING (Final employee appraisal rating out of 5)
   * KPI_SCORE (Actual KPI / Target KPI) × 100
   * GOAL_PERC (Percentage of goals completed)
-  * MGR_RATING (Manager-assigned evaluation score)
-  * POTENTIAL (Future growth/leadership potential assessment)
+  * MGR_RATING (Manager-assigned evaluation score out of 5)
+  * POTENTIAL (Future growth/leadership potential assessment score out of 5)
   * PERF_CHANGE (Difference between current and previous rating)
+    
 * FACT_PRODUCTIVITY
 * FACT_PROMOTION
 * FACT_TRAINING

@@ -127,19 +127,19 @@
 
 * Future Ready Group =
 
-    IF (
-        FACT_PROD_RISK_PROBAB[READINESS_INDEX] >= 60,
-        "Future Ready",
-        IF (
-            FACT_PROD_RISK_PROBAB[READINESS_INDEX] >= 50,
-            "Growth Potential",
-            IF (
-                FACT_PROD_RISK_PROBAB[READINESS_INDEX] >= 40,
-                "Development Required",
-                "Career Stagnation Risk"
-            )
-        )
-    )
+          IF (
+              FACT_PROD_RISK_PROBAB[READINESS_INDEX] >= 60,
+              "Future Ready",
+              IF (
+                  FACT_PROD_RISK_PROBAB[READINESS_INDEX] >= 50,
+                  "Growth Potential",
+                  IF (
+                      FACT_PROD_RISK_PROBAB[READINESS_INDEX] >= 40,
+                      "Development Required",
+                      "Career Stagnation Risk"
+                  )
+              )
+          )
 
 
 * Future Ready % =

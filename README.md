@@ -431,7 +431,7 @@ The model generates:
 * Filters: Unit/ Location/ Cadre/ Grade/ Risk Band
 * Buttons: Data Reset Button
 * Metrics: Future Ready %/ Certified %/ Avg Career Velocity/ Avg Training Hours/ Compensation Stagnation %
-* Visuals:
+* Visuals: Learning Effectiveness Analysis(Line & Column Chart)/ Career Velocity Distribution(Column Chart)/ Workforce Capability Matrix(Scatter Plot)/ Future Readiness Segmentation (Funnel Chart)
 * Observations:
 
 ## Key Insights:

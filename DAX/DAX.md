@@ -37,6 +37,7 @@
 
  
 * Top Risk Driver =
+  
             CALCULATE (
                 SELECTEDVALUE ( FACT_PROD_RISK_FACTORS[FEATURE] ),
                 FACT_PROD_RISK_FACTORS[Abs Coeff] = MAX ( FACT_PROD_RISK_FACTORS[Abs Coeff] )
@@ -90,7 +91,8 @@
             )
 
 
-* Burnout Risk % = 
+* Burnout Risk % =
+  
             DIVIDE(
                 CALCULATE(
                     COUNTROWS('FACT_PROD_RISK_PROBAB'),

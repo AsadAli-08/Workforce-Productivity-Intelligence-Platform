@@ -470,6 +470,17 @@ The model generates:
 
 ## Key Insights:
 
+* Workforce productivity remained stable throughout the analysis period, with average productivity consistently maintained around the 86% level.
+* Nearly 96% of employees fall within the High or Very High productivity categories, reflecting a strong overall workforce performance profile.
+* Significant productivity variation exists across business units, grades, and locations, indicating differences in operational efficiency and workforce performance across the organization.
+* Machine learning analysis identified recent productivity trends (PROD_3M_SLOPE) as the strongest predictor of future productivity deterioration risk.
+* Higher overtime, low engagement, weaker KPI performance, poor manager ratings, low certifications, and compensation stagnation significantly increase productivity risk probability.
+* Strong managerial support, longer employee tenure, and stable recent productivity trends are associated with lower workforce productivity risk.
+* CFFP emerged as the highest-risk business unit, while EPD recorded the lowest overall productivity risk levels.
+* Productivity risk is concentrated within junior workforce grades, with the E9 grade in the ROD unit identified as the most critical workforce risk hotspot.
+* Workforce learning and development show a positive relationship with productivity performance, highlighting the impact of capability-building initiatives on operational outcomes.
+* While a large portion of employees demonstrate strong career growth potential, only a limited percentage currently qualify as Future Ready, indicating opportunities to strengthen long-term workforce capability and talent readiness.
+
 ## Recommendations:
 
 ## Author:

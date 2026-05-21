@@ -412,10 +412,15 @@ The model generates:
 * Metrics: Avg Productivity Rate/ High Performer %/ High Risk Employee Count/ Avg Utilisation Rate
 * Visuals: Producitivity Rate Trend Analysis(Line Chart)/ Productivity Distribution Analysis(Histogram)/ Productivity Ranking by Unit(Bar Chart)/ Productivity Decomposition Tree (Decomposition Tree)
 * Observations:
-        * Workforce productivity remained largely stable over the analysis period, fluctuating marginally around the 86% mark.      
-        * Nearly 96% of employees fall within the High or Very High productivity bands, indicating a strong overall productivity profile.  
+  
+        * Workforce productivity remained largely stable over the analysis period, fluctuating marginally around the 86% mark.
+       
+        * Nearly 96% of employees fall within the High or Very High productivity bands, indicating a strong overall productivity profile.
+  
         * EPD recorded the highest productivity levels among business units, while PC showed comparatively lower productivity performance.
+  
         * Productivity performance improves across higher workforce grades, with E11 recording the highest average productivity.
+  
         * Significant location-level variation exists, with Gorakhpur showing the highest productivity and Lakwa recording the lowest productivity levels.
 
   

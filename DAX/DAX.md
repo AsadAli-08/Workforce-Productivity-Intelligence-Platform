@@ -142,74 +142,64 @@ IF (
 )
 
 
-* Future Ready % = 
-
-Divide
-(
-    CALCULATE(
-        count(FACT_PROD_RISK_PROBAB[Emp ID]),
-        FACT_PROD_RISK_PROBAB[Future Ready Group] = "Future Ready"
-        ), 
-count(FACT_PROD_RISK_PROBAB[Emp ID])
-)
-
-Future Ready % =
-DIVIDE (
-    CALCULATE (
-        COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] ),
-        FACT_PROD_RISK_PROBAB[Future Ready Group] = "Future Ready"
-    ),
-    COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] )
-)
+* Future Ready % =
+  
+    DIVIDE (
+        CALCULATE (
+            COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] ),
+            FACT_PROD_RISK_PROBAB[Future Ready Group] = "Future Ready"
+        ),
+        COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] )
+    )
 
 * Certified % =
 
-DIVIDE (
-    CALCULATE (
-        COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] ),
-        FACT_PROD_RISK_PROBAB[CERT_COUNT] >= 1
-    ),
-    COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] )
-)
+    DIVIDE (
+        CALCULATE (
+            COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] ),
+            FACT_PROD_RISK_PROBAB[CERT_COUNT] >= 1
+        ),
+        COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] )
+    )
 
 * Compensation Stagnation % =
 
-DIVIDE (
-    CALCULATE (
-        COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] ),
-        FACT_PROD_RISK_PROBAB[COMP_STAG_FLAG] = 1
-    ),
-    COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] )
-)
+    DIVIDE (
+        CALCULATE (
+            COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] ),
+            FACT_PROD_RISK_PROBAB[COMP_STAG_FLAG] = 1
+        ),
+        COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] )
+    )
 
 * Career Velocity Band =
 
-IF (
-    FACT_PROD_RISK_PROBAB[CAREER_VELOCITY] >= 0.25,
-    "Rapid",
     IF (
-        FACT_PROD_RISK_PROBAB[CAREER_VELOCITY] >= 0.15,
-        "Healthy",
+        FACT_PROD_RISK_PROBAB[CAREER_VELOCITY] >= 0.25,
+        "Rapid",
         IF (
-            FACT_PROD_RISK_PROBAB[CAREER_VELOCITY] >= 0.05,
-            "Stagnation",
-            "Career Risk"
+            FACT_PROD_RISK_PROBAB[CAREER_VELOCITY] >= 0.15,
+            "Healthy",
+            IF (
+                FACT_PROD_RISK_PROBAB[CAREER_VELOCITY] >= 0.05,
+                "Stagnation",
+                "Career Risk"
+            )
         )
     )
-)
 
 * Future Ready Group = 
 
-IF (
-    FACT_PROD_RISK_PROBAB[READINESS_INDEX] >= 60,
-    "Future Ready",
     IF (
-        FACT_PROD_RISK_PROBAB[READINESS_INDEX] >= 50,
-        "Growth Potential",
+        FACT_PROD_RISK_PROBAB[READINESS_INDEX] >= 60,
+        "Future Ready",
         IF (
-            FACT_PROD_RISK_PROBAB[READINESS_INDEX] >= 40,
-            "Development Required",
-            "Career Stagnation Risk"
+            FACT_PROD_RISK_PROBAB[READINESS_INDEX] >= 50,
+            "Growth Potential",
+            IF (
+                FACT_PROD_RISK_PROBAB[READINESS_INDEX] >= 40,
+                "Development Required",
+                "Career Stagnation Risk"
+            )
         )
     )
-)

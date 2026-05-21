@@ -483,6 +483,12 @@ The model generates:
 
 ## Recommendations:
 
+* Prioritize intervention strategies for high-risk workforce segments, particularly junior grades and critical operational hotspots such as the E9 workforce segment within the ROD unit, where productivity risk levels are significantly elevated.
+* Strengthen workforce engagement and managerial effectiveness initiatives, as low engagement, weaker KPI performance, and poor manager ratings emerged as major contributors to productivity deterioration risk.
+* Monitor overtime and workload pressure more closely to reduce long-term workforce sustainability risks and prevent productivity decline caused by operational fatigue.
+* Expand targeted learning and capability development programs, especially for employees classified under Development Required and Career Stagnation Risk segments, to improve long-term workforce readiness and productivity stability.
+* Develop a structured workforce growth and retention strategy focused on career progression, certifications, and compensation progression to reduce compensation stagnation risk and strengthen future workforce capability.
+
 ## Author:
 
 Asad Ali

@@ -401,10 +401,39 @@ The model generates:
 
 ## Power BI Dashboard:
 ### Executive Overview
+* Filters: Date/ Unit/ Location/ Cadre/ Grade
+* Buttons: Data Reset Button
+* Metrics: Avg Productivity Rate/ Avg Risk Probability/ Avg Timeliness/ Future Ready %
+* Visuals: 
+* Observations:
+  
 ### Workforce Productivity Intelligence
+* Filters: Date/ Unit/ Location/ Cadre/ Grade
+* Buttons: Data Reset Button
+* Metrics: Avg Productivity Rate/ High Performer %/ High Risk Employee Count/ Avg Utilisation Rate
+* Visuals:
+* Observations:
+  
 ### Productivity Risk Driver Lab
+* Filters: Unit/ Location/ Cadre/ Grade/ Risk Band
+* Buttons: Data Reset Button
+* Metrics: High Risk Employee Count/ Avg Risk Probability/ Top Risk Driver/ Burnout Risk Correlation/ Burnout Risk % 
+* Visuals:
+* Observations:
+  
 ### Workforce Action Centre
+* Filters: Unit/ Location/ Cadre/ Grade/ Risk Band
+* Buttons: Data Reset Button
+* Metrics: High Risk Employee Count/ High Risk Employee %/ Avg Productivity Risk Probability
+* Visuals:
+* Observations:
+  
 ### Growth & Capability Intelligence
+* Filters: Unit/ Location/ Cadre/ Grade/ Risk Band
+* Buttons: Data Reset Button
+* Metrics: Future Ready %/ Certified %/ Avg Career Velocity/ Avg Training Hours/ Compensation Stagnation %
+* Visuals:
+* Observations:
 
 ## Key Insights:
 

@@ -432,9 +432,13 @@ The model generates:
 * Observations:
   
         * Productivity risk increases with higher overtime, lower engagement, weaker KPI performance, low certifications, poor manager ratings, and compensation stagnation.
+  
         * Strong manager support, longer tenure, stable recent productivity trends, and lower leave spikes are linked with lower productivity risk.
+  
         * CFFP shows the highest average productivity risk (43%), while EPD records the lowest risk levels (10%).
+  
         * Risk levels are highest in junior grades, with E1 employees showing the highest risk exposure, while E11 employees show the lowest risk levels.
+  
         * The E9 grade within the ROD unit emerges as the most critical hotspot, with productivity risk reaching nearly 80%.
   
 ### Workforce Action Centre

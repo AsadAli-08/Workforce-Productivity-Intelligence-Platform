@@ -102,9 +102,24 @@
             )
 
 
-  
-
 
 ## Workforce Action Centre
+
+* High Risk Employees = 
+
+      CALCULATE (
+          COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] ),
+          FACT_PROD_RISK_PROBAB[Risk Band] = "High"
+      )
+
+* High Risk Employee % = 
+
+
+      divide ( 
+              CALCULATE(count(FACT_PROD_RISK_PROBAB[Emp ID]), FACT_PROD_RISK_PROBAB[Risk Band] = "High"),
+              count(FACT_PROD_RISK_PROBAB[Emp ID])
+      )
+
+
 
 ## Growth & Capability Intelligence

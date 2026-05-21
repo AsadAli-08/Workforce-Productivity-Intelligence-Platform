@@ -434,12 +434,9 @@ The model generates:
         * Productivity risk increases with higher overtime, lower engagement, weaker KPI performance, low certifications, poor manager ratings, and compensation stagnation.
   
         * Strong manager support, longer tenure, stable recent productivity trends, and lower leave spikes are linked with lower productivity risk.
+
+        * Productivity risk is most strongly influenced by recent productivity trends, with PROD_3M_SLOPE emerging as the most significant driver in the model, followed by tenure, manager rating, and KPI performance.
   
-        * CFFP shows the highest average productivity risk (43%), while EPD records the lowest risk levels (10%).
-  
-        * Risk levels are highest in junior grades, with E1 employees showing the highest risk exposure, while E11 employees show the lowest risk levels.
-  
-        * The E9 grade within the ROD unit emerges as the most critical hotspot, with productivity risk reaching nearly 80%.
   
 ### Workforce Action Centre
 * Filters: Unit/ Location/ Cadre/ Grade/ Risk Band
@@ -447,6 +444,12 @@ The model generates:
 * Metrics: High Risk Employee Count/ High Risk Employee %/ Avg Productivity Risk Probability
 * Visuals: Employee Productivity Risk Register(Table)/ High Risk Units(Bar Chart)/ Workforce Risk Quadrant(Scatter Plot)
 * Observations:
+
+        * CFFP shows the highest average productivity risk (43%), while EPD records the lowest risk levels (10%).
+  
+        * Risk levels are highest in junior grades, with E1 employees showing the highest risk exposure, while E11 employees show the lowest risk levels.
+  
+        * The E9 grade within the ROD unit emerges as the most critical hotspot, with productivity risk reaching nearly 80%.
   
 ### Growth & Capability Intelligence
 * Filters: Unit/ Location/ Cadre/ Grade/ Risk Band
@@ -454,6 +457,12 @@ The model generates:
 * Metrics: Future Ready %/ Certified %/ Avg Career Velocity/ Avg Training Hours/ Compensation Stagnation %
 * Visuals: Learning Effectiveness Analysis(Line & Column Chart)/ Career Velocity Distribution(Column Chart)/ Workforce Capability Matrix(Scatter Plot)/ Future Readiness Segmentation (Funnel Chart)
 * Observations:
+
+          * Employee engagement improves steadily with training participation up to nearly 85 training hours, after which engagement levels begin to decline, indicating possible learning saturation or training fatigue.
+          * Nearly 73% of employees fall within the Rapid Career Velocity segment, while only 5% show signs of career stagnation and 1% fall into the critical career risk category.
+          * Productivity levels show a positive relationship with training hours, suggesting that workforce learning and capability development contribute positively to operational performance.
+          * Almost half of the workforce (47%) falls within the Growth Potential segment, while development support is still required for 38% of employees.
+          * Only 8% of employees currently qualify as Future Ready, while another 8% are classified under Career Stagnation Risk, highlighting opportunities for long-term workforce capability improvement.
 
 ## Key Insights:
 

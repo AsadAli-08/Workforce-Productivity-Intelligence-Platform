@@ -13,21 +13,21 @@
           )
       )
   
-  High Performer % =
-      DIVIDE (
+      High Performer % =
+          DIVIDE (
+              CALCULATE (
+                  COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] ),
+                  FACT_PROD_RISK_PROBAB[Productivity Band] = "Very High"
+                      || FACT_PROD_RISK_PROBAB[Productivity Band] = "High"
+              ),
+              COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] )
+          )
+      
+      High Risk Employees =
           CALCULATE (
               COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] ),
-              FACT_PROD_RISK_PROBAB[Productivity Band] = "Very High"
-                  || FACT_PROD_RISK_PROBAB[Productivity Band] = "High"
-          ),
-          COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] )
-      )
-  
-  High Risk Employees =
-      CALCULATE (
-          COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] ),
-          FACT_PROD_RISK_PROBAB[Risk Band] = "High"
-      )
+              FACT_PROD_RISK_PROBAB[Risk Band] = "High"
+          )
 
 
 

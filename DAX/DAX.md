@@ -115,12 +115,12 @@
 * High Risk Employee % = 
 
       DIVIDE (
-    CALCULATE (
-        COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] ),
-        FACT_PROD_RISK_PROBAB[Risk Band] = "High"
-    ),
-    COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] )
-)
+          CALCULATE (
+              COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] ),
+              FACT_PROD_RISK_PROBAB[Risk Band] = "High"
+          ),
+          COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] )
+      )
 
 
 

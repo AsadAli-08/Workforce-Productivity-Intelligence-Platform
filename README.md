@@ -424,7 +424,7 @@ The model generates:
 * Filters: Unit/ Location/ Cadre/ Grade/ Risk Band
 * Buttons: Data Reset Button
 * Metrics: High Risk Employee Count/ High Risk Employee %/ Avg Productivity Risk Probability
-* Visuals:
+* Visuals: Employee Productivity Risk Register(Table)/ High Risk Units(Bar Chart)/ Workforce Risk Quadrant(Scatter Plot)
 * Observations:
   
 ### Growth & Capability Intelligence

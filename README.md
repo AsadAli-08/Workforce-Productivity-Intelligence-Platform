@@ -459,9 +459,13 @@ The model generates:
 * Observations:
 
           * Employee engagement improves steadily with training participation up to nearly 85 training hours, after which engagement levels begin to decline, indicating possible learning saturation or training fatigue.
+  
           * Nearly 73% of employees fall within the Rapid Career Velocity segment, while only 5% show signs of career stagnation and 1% fall into the critical career risk category.
+  
           * Productivity levels show a positive relationship with training hours, suggesting that workforce learning and capability development contribute positively to operational performance.
+  
           * Almost half of the workforce (47%) falls within the Growth Potential segment, while development support is still required for 38% of employees.
+  
           * Only 8% of employees currently qualify as Future Ready, while another 8% are classified under Career Stagnation Risk, highlighting opportunities for long-term workforce capability improvement.
 
 ## Key Insights:

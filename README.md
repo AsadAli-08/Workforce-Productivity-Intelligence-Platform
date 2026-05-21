@@ -417,13 +417,13 @@ The model generates:
 * Filters: Unit/ Location/ Cadre/ Grade/ Risk Band
 * Buttons: Data Reset Button
 * Metrics: High Risk Employee Count/ Avg Risk Probability/ Top Risk Driver/ Burnout Risk Correlation/ Burnout Risk % 
-* Visuals: Machine Learning Driver Importance (Bar Chart)/ Top Productivity Risk Drivers(Column Chart)/ 
+* Visuals: Machine Learning Driver Importance (Bar Chart)/ Top Productivity Risk Drivers(Column Chart)/ Top Risk Driver v/s Productivity Risk(Scatter Plot)/ Productivity Risk Heatmap (Matrix)
 * Observations:
   
 ### Workforce Action Centre
 * Filters: Unit/ Location/ Cadre/ Grade/ Risk Band
 * Buttons: Data Reset Button
-* Metrics: High Risk Employee Count/ High Risk Employee %/ Avg Productivity Risk Probability/ Top Risk Driver v/s Productivity Risk(Scatter Plot)/ Productivity Risk Heatmap (Matrix)
+* Metrics: High Risk Employee Count/ High Risk Employee %/ Avg Productivity Risk Probability
 * Visuals:
 * Observations:
   

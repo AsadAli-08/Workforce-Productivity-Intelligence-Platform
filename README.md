@@ -404,7 +404,7 @@ The model generates:
 * Filters: Date/ Unit/ Location/ Cadre/ Grade
 * Buttons: Data Reset Button
 * Metrics: Avg Productivity Rate/ Avg Risk Probability/ Avg Timeliness/ Future Ready %
-* Visuals: 
+* Visuals: Producitivity Rate Trend Analysis(Line Chart)/ Top Productivity Risk Drivers(Column Chart) / Top 10 Employees at Risk(Table) / Future Readiness Segmentation(Bar Chart) 
 * Observations:
   
 ### Workforce Productivity Intelligence

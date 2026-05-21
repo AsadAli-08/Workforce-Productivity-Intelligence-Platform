@@ -2,7 +2,7 @@
 
 ## Workforce Producitivity Intelligence
 
-    Productivity Band =
+* Productivity Band =
       IF (
           FACT_PROD_RISK_PROBAB[Prod Rate] >= 90,
           "Very High",
@@ -13,7 +13,7 @@
           )
       )
   
-      High Performer % =
+* High Performer % =
           DIVIDE (
               CALCULATE (
                   COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] ),
@@ -23,7 +23,7 @@
               COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] )
           )
       
-      High Risk Employees =
+* High Risk Employees =
           CALCULATE (
               COUNT ( FACT_PROD_RISK_PROBAB[Emp ID] ),
               FACT_PROD_RISK_PROBAB[Risk Band] = "High"

@@ -37,67 +37,67 @@
 
  
 * Top Risk Driver =
-        CALCULATE (
-            SELECTEDVALUE ( FACT_PROD_RISK_FACTORS[FEATURE] ),
-            FACT_PROD_RISK_FACTORS[Abs Coeff] = MAX ( FACT_PROD_RISK_FACTORS[Abs Coeff] )
-        )
+            CALCULATE (
+                SELECTEDVALUE ( FACT_PROD_RISK_FACTORS[FEATURE] ),
+                FACT_PROD_RISK_FACTORS[Abs Coeff] = MAX ( FACT_PROD_RISK_FACTORS[Abs Coeff] )
+            )
 
 
 * Burnout Risk Correlation = 
-        VAR MeanX =
-            AVERAGE('FACT_PROD_RISK_PROBAB'[Burn Score])
-        
-        VAR MeanY =
-            AVERAGE('FACT_PROD_RISK_PROBAB'[Risk Probability])
-        
-        VAR Numerator =
-            SUMX(
-                'FACT_PROD_RISK_PROBAB',
-                (
-                    'FACT_PROD_RISK_PROBAB'[Burn Score] - MeanX
-                ) *
-                (
-                    'FACT_PROD_RISK_PROBAB'[Risk Probability] - MeanY
-                )
-            )
-        
-        VAR DenominatorX =
-            SQRT(
+            VAR MeanX =
+                AVERAGE('FACT_PROD_RISK_PROBAB'[Burn Score])
+            
+            VAR MeanY =
+                AVERAGE('FACT_PROD_RISK_PROBAB'[Risk Probability])
+            
+            VAR Numerator =
                 SUMX(
                     'FACT_PROD_RISK_PROBAB',
-                    POWER(
-                        'FACT_PROD_RISK_PROBAB'[Burn Score] - MeanX,
-                        2
+                    (
+                        'FACT_PROD_RISK_PROBAB'[Burn Score] - MeanX
+                    ) *
+                    (
+                        'FACT_PROD_RISK_PROBAB'[Risk Probability] - MeanY
                     )
                 )
-            )
-        
-        VAR DenominatorY =
-            SQRT(
-                SUMX(
-                    'FACT_PROD_RISK_PROBAB',
-                    POWER(
-                        'FACT_PROD_RISK_PROBAB'[Risk Probability] - MeanY,
-                        2
+            
+            VAR DenominatorX =
+                SQRT(
+                    SUMX(
+                        'FACT_PROD_RISK_PROBAB',
+                        POWER(
+                            'FACT_PROD_RISK_PROBAB'[Burn Score] - MeanX,
+                            2
+                        )
                     )
                 )
+            
+            VAR DenominatorY =
+                SQRT(
+                    SUMX(
+                        'FACT_PROD_RISK_PROBAB',
+                        POWER(
+                            'FACT_PROD_RISK_PROBAB'[Risk Probability] - MeanY,
+                            2
+                        )
+                    )
+                )
+            
+            RETURN
+            DIVIDE(
+                Numerator,
+                DenominatorX * DenominatorY
             )
-        
-        RETURN
-        DIVIDE(
-            Numerator,
-            DenominatorX * DenominatorY
-        )
 
 
 * Burnout Risk % = 
-        DIVIDE(
-            CALCULATE(
-                COUNTROWS('FACT_PROD_RISK_PROBAB'),
-                'FACT_PROD_RISK_PROBAB'[Burnout_Risk] = "High Risk"
-            ),
-            COUNTROWS('FACT_PROD_RISK_PROBAB')
-        )
+            DIVIDE(
+                CALCULATE(
+                    COUNTROWS('FACT_PROD_RISK_PROBAB'),
+                    'FACT_PROD_RISK_PROBAB'[Burnout_Risk] = "High Risk"
+                ),
+                COUNTROWS('FACT_PROD_RISK_PROBAB')
+            )
 
 
   

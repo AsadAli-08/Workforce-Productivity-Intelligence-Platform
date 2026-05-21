@@ -33,10 +33,75 @@
                 )
 
 
-
-
-
 ## Productivity Risk Driver Lab
+
+ 
+* Top Risk Driver =
+        CALCULATE (
+            SELECTEDVALUE ( FACT_PROD_RISK_FACTORS[FEATURE] ),
+            FACT_PROD_RISK_FACTORS[Abs Coeff] = MAX ( FACT_PROD_RISK_FACTORS[Abs Coeff] )
+        )
+
+
+* Burnout Risk Correlation = 
+        VAR MeanX =
+            AVERAGE('FACT_PROD_RISK_PROBAB'[Burn Score])
+        
+        VAR MeanY =
+            AVERAGE('FACT_PROD_RISK_PROBAB'[Risk Probability])
+        
+        VAR Numerator =
+            SUMX(
+                'FACT_PROD_RISK_PROBAB',
+                (
+                    'FACT_PROD_RISK_PROBAB'[Burn Score] - MeanX
+                ) *
+                (
+                    'FACT_PROD_RISK_PROBAB'[Risk Probability] - MeanY
+                )
+            )
+        
+        VAR DenominatorX =
+            SQRT(
+                SUMX(
+                    'FACT_PROD_RISK_PROBAB',
+                    POWER(
+                        'FACT_PROD_RISK_PROBAB'[Burn Score] - MeanX,
+                        2
+                    )
+                )
+            )
+        
+        VAR DenominatorY =
+            SQRT(
+                SUMX(
+                    'FACT_PROD_RISK_PROBAB',
+                    POWER(
+                        'FACT_PROD_RISK_PROBAB'[Risk Probability] - MeanY,
+                        2
+                    )
+                )
+            )
+        
+        RETURN
+        DIVIDE(
+            Numerator,
+            DenominatorX * DenominatorY
+        )
+
+
+* Burnout Risk % = 
+        DIVIDE(
+            CALCULATE(
+                COUNTROWS('FACT_PROD_RISK_PROBAB'),
+                'FACT_PROD_RISK_PROBAB'[Burnout_Risk] = "High Risk"
+            ),
+            COUNTROWS('FACT_PROD_RISK_PROBAB')
+        )
+
+
+  
+
 
 ## Workforce Action Centre
 

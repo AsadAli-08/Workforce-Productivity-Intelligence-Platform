@@ -208,6 +208,10 @@ The main objectives of the project are:
   * Grade_Code
   * Grade_Name
   * Cadre_Name
+ 
+* DIM_FUNCTION
+  * FUNCTION_CODE
+  * Function_Name 
 
 ### Feature Engineering Tables:
 * FEAT_ATTENDANCE

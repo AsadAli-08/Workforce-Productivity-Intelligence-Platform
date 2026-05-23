@@ -492,7 +492,7 @@ The model generates:
 * Filters: Unit/ Location/ Function/ Grade/ Gender/ Risk Band
 * Buttons: Data Reset Button
 * Metrics: High Risk Employee %/ High Risk Employee Count/ Avg Prod Risk Probability
-* Visuals: Machine Learning Driver Importance (Bar Chart)/ Top Productivity Risk Drivers(Column Chart)/ Top Risk Driver v/s Productivity Risk(Scatter Plot)/ Productivity Risk Heatmap (Matrix)
+* Visuals: Productivity Risk Band Distribution(Donut Chart)/ Productivity Risk by Grade(Stacked Column Chart)/ Productivity Risk by Age-Gender(Stacked Bar Chart)/ Productivity Risk Heatmap(Matrix)
 * Observations:
   
         * Productivity risk increases with higher overtime, lower engagement, weaker KPI performance, low certifications, poor manager ratings, and compensation stagnation.
@@ -506,14 +506,14 @@ The model generates:
 * Filters: Unit/ Location/ Function/ Grade/ Gender/ Risk Band
 * Buttons: Data Reset Button
 * Metrics: High Risk Employee %/ High Risk Employee Count/ Avg Prod Risk Probability
-* Visuals: Machine Learning Driver Importance (Bar Chart)/ Top Productivity Risk Drivers(Column Chart)/ Top Risk Driver v/s Productivity Risk(Scatter Plot)/ Productivity Risk Heatmap (Matrix)
+* Visuals: Top Productivity Risk Drivers(Bar Chart)
 * Observations:
 
 ### Workforce Action Centre
 * Filters: Unit/ Location/ Function/ Grade/ Gender/ Risk Band
 * Buttons: Data Reset Button
 * Metrics: High Risk Employee Count/ High Risk Employee %/ Avg Productivity Risk Probability
-* Visuals: Employee Productivity Risk Register(Table)/ High Risk Units(Bar Chart)/ Workforce Risk Quadrant(Scatter Plot)
+* Visuals: Employee Productivity Risk Register(Table)
 * Observations:
 
         * CFFP shows the highest average productivity risk (43%), while EPD records the lowest risk levels (10%).

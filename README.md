@@ -467,13 +467,13 @@ The model generates:
 ### Executive Overview
 * Filters: Date/ Unit/ Location/ Function/ Grade/ Gender/ Risk Band
 * Buttons: Data Reset Button
-* Metrics: Avg Productivity Rate/ Avg Risk Probability/ Avg Timeliness/ Future Ready %
+* Metrics: High Risk Employee %/ Avg Productivity Rate/ High Risk Employee Count/ Avg Risk Probability
 * Visuals: Producitivity Rate Trend Analysis(Line Chart)/ Top Productivity Risk Drivers(Column Chart) / Top 10 Employees at Risk(Table) / Future Readiness Segmentation(Bar Chart) 
   
 ### Historical Productivity Trend
 * Filters: Date/ Unit/ Location/ Function/ Grade/ Gender
 * Buttons: Data Reset Button
-* Metrics: Avg Productivity Rate/ High Performer %/ High Risk Employee Count/ Avg Utilisation Rate
+* Metrics: Avg Productivity Rate/ Avg Utilisation Rate/ Avg Error Rate/ Avg Timeliness
 * Visuals: Producitivity Rate Trend Analysis(Line Chart)/ Productivity Distribution Analysis(Histogram)/ Productivity Ranking by Unit(Bar Chart)/ Productivity Decomposition Tree (Decomposition Tree)
 * Observations:
   
@@ -491,7 +491,7 @@ The model generates:
 ### Productivity Risk Predictive Analysis
 * Filters: Unit/ Location/ Function/ Grade/ Gender/ Risk Band
 * Buttons: Data Reset Button
-* Metrics: High Risk Employee Count/ Avg Risk Probability/ Top Risk Driver/ Burnout Risk Correlation/ Burnout Risk % 
+* Metrics: High Risk Employee %/ High Risk Employee Count/ Avg Prod Risk Probability
 * Visuals: Machine Learning Driver Importance (Bar Chart)/ Top Productivity Risk Drivers(Column Chart)/ Top Risk Driver v/s Productivity Risk(Scatter Plot)/ Productivity Risk Heatmap (Matrix)
 * Observations:
   
@@ -505,7 +505,7 @@ The model generates:
 ### Productivity Risk Drivers:
 * Filters: Unit/ Location/ Function/ Grade/ Gender/ Risk Band
 * Buttons: Data Reset Button
-* Metrics: High Risk Employee Count/ Avg Risk Probability/ Top Risk Driver/ Burnout Risk Correlation/ Burnout Risk % 
+* Metrics: High Risk Employee %/ High Risk Employee Count/ Avg Prod Risk Probability
 * Visuals: Machine Learning Driver Importance (Bar Chart)/ Top Productivity Risk Drivers(Column Chart)/ Top Risk Driver v/s Productivity Risk(Scatter Plot)/ Productivity Risk Heatmap (Matrix)
 * Observations:
 

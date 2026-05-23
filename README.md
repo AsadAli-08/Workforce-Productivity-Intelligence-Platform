@@ -211,7 +211,11 @@ The main objectives of the project are:
  
 * DIM_FUNCTION
   * FUNCTION_CODE
-  * Function_Name 
+  * Function_Name
+ 
+* DIM_GENDER
+  * GENDER_CODE
+  * Gender 
 
 ### Feature Engineering Tables:
 * FEAT_ATTENDANCE
@@ -375,13 +379,69 @@ The main objectives of the project are:
 * FEAT_PROD_RISK_FACTORS (Coefficients of the Logistic Regression Model as generated using ML)
   * FEATURE
   * COEFFICIENT
+
+* FEAT_PROD_STD_FEATURES (Employee wise Calculatiion of standardised value of all Features)
+  * SNAPSHOT_MONTH
+  * EMP_ID
+  * GENDER
+  * TENURE_YY
+  * AGE_YY
+  * CADRE
+  * GRADE
+  * UNIT
+  * LOCATION
+  * FUNCTION
+  * DOJ
+  * DOR
+  * YY_SINCE_PROM
+  * STAGFLATION
+  * CAREER_VELOCITY
+  * TASKS_ASSIGNED
+  * PROD_RATE
+  * TIMELINESS
+  * ERROR_RATE
+  * UTILISE_RATE
+  * PRODUC_HOURS
+  * RATING
+  * KPI
+  * GOAL_PERC
+  * MGR_RATING
+  * POTENTIAL
+  * PERF_CHANGE
+  * COMPA_RATIO
+  * SAL_GROWTH
+  * ENGAGE_SCORE
+  * BURN_SCORE
+  * WELL_SCORE
+  * MANAGER_SCORE
+  * CULTURE_SCORE
+  * WORKLOAD_SCORE
+  * ABSENCE_DAYS
+  * SICK_LEAVES
+  * LATE_LOGINS
+  * EARLY_EXITS
+  * OVERTIME_HH
+  * TRAIN_HH_6M
+  * AVG_TRAIN_SCORE_6M
+  * CERT_COUNT
+  * PROD_3M_AVG
+  * PROD_3M_SLOPE
+  * PROD_VOLATILITY
+  * PROD_RISK_FLAG
+  * ABSENCE_3M_AVG
+  * CONS_OVERTIME_MONTHS
+  * LEAVE_SPIKE_FLAG
+  * BURNOUT_RISK_FLAG
+  * PAY_GROWTH_TREND
+  * COMP_STAG_FLAG
+  * PROD_RISK_PROB
    
 ## Machine Learning Model:
 The primary objective of the model is to:
 
-* predict the probability of future productivity deterioration,
-* identify workforce conditions contributing to productivity risk,
-* support proactive workforce intervention and decision-making.
+* predict the probability of future productivity deterioration
+* identify workforce conditions contributing to productivity risk
+* support proactive workforce intervention and decision-making by identifying employee wise top risk drivers.
 
 Instead of focusing only on current productivity levels, the model was designed to identify patterns that may indicate future workforce performance decline.
 
@@ -401,17 +461,17 @@ The project uses a Logistic Regression model. Logistic Regression was selected b
 The model generates:
 * productivity risk probability scores
 * employee-level workforce risk classification
-* top drivers contributing to productivity risk
+* employee wise top drivers contributing to productivity risk
 
 ## Power BI Dashboard:
 ### Executive Overview
-* Filters: Date/ Unit/ Location/ Cadre/ Grade
+* Filters: Date/ Unit/ Location/ Function/ Grade/ Gender/ Risk Band
 * Buttons: Data Reset Button
 * Metrics: Avg Productivity Rate/ Avg Risk Probability/ Avg Timeliness/ Future Ready %
 * Visuals: Producitivity Rate Trend Analysis(Line Chart)/ Top Productivity Risk Drivers(Column Chart) / Top 10 Employees at Risk(Table) / Future Readiness Segmentation(Bar Chart) 
   
-### Workforce Productivity Intelligence
-* Filters: Date/ Unit/ Location/ Cadre/ Grade
+### Historical Productivity Trend
+* Filters: Date/ Unit/ Location/ Function/ Grade/ Gender
 * Buttons: Data Reset Button
 * Metrics: Avg Productivity Rate/ High Performer %/ High Risk Employee Count/ Avg Utilisation Rate
 * Visuals: Producitivity Rate Trend Analysis(Line Chart)/ Productivity Distribution Analysis(Histogram)/ Productivity Ranking by Unit(Bar Chart)/ Productivity Decomposition Tree (Decomposition Tree)
@@ -428,8 +488,8 @@ The model generates:
         * Significant location-level variation exists, with Gorakhpur showing the highest productivity and Lakwa recording the lowest productivity levels.
 
   
-### Productivity Risk Driver Lab
-* Filters: Unit/ Location/ Cadre/ Grade/ Risk Band
+### Productivity Risk Predictive Analysis
+* Filters: Unit/ Location/ Function/ Grade/ Gender/ Risk Band
 * Buttons: Data Reset Button
 * Metrics: High Risk Employee Count/ Avg Risk Probability/ Top Risk Driver/ Burnout Risk Correlation/ Burnout Risk % 
 * Visuals: Machine Learning Driver Importance (Bar Chart)/ Top Productivity Risk Drivers(Column Chart)/ Top Risk Driver v/s Productivity Risk(Scatter Plot)/ Productivity Risk Heatmap (Matrix)
@@ -442,8 +502,15 @@ The model generates:
         * Productivity risk is most strongly influenced by recent productivity trends, with PROD_3M_SLOPE emerging as the most significant driver in the model, followed by tenure, manager rating, and KPI performance.
   
   
+### Productivity Risk Drivers:
+* Filters: Unit/ Location/ Function/ Grade/ Gender/ Risk Band
+* Buttons: Data Reset Button
+* Metrics: High Risk Employee Count/ Avg Risk Probability/ Top Risk Driver/ Burnout Risk Correlation/ Burnout Risk % 
+* Visuals: Machine Learning Driver Importance (Bar Chart)/ Top Productivity Risk Drivers(Column Chart)/ Top Risk Driver v/s Productivity Risk(Scatter Plot)/ Productivity Risk Heatmap (Matrix)
+* Observations:
+
 ### Workforce Action Centre
-* Filters: Unit/ Location/ Cadre/ Grade/ Risk Band
+* Filters: Unit/ Location/ Function/ Grade/ Gender/ Risk Band
 * Buttons: Data Reset Button
 * Metrics: High Risk Employee Count/ High Risk Employee %/ Avg Productivity Risk Probability
 * Visuals: Employee Productivity Risk Register(Table)/ High Risk Units(Bar Chart)/ Workforce Risk Quadrant(Scatter Plot)
@@ -455,43 +522,13 @@ The model generates:
   
         * The E9 grade within the ROD unit emerges as the most critical hotspot, with productivity risk reaching nearly 80%.
   
-### Growth & Capability Intelligence
-* Filters: Unit/ Location/ Cadre/ Grade/ Risk Band
-* Buttons: Data Reset Button
-* Metrics: Future Ready %/ Certified %/ Avg Career Velocity/ Avg Training Hours/ Compensation Stagnation %
-* Visuals: Learning Effectiveness Analysis(Line & Column Chart)/ Career Velocity Distribution(Column Chart)/ Workforce Capability Matrix(Scatter Plot)/ Future Readiness Segmentation (Funnel Chart)
-* Observations:
-
-          * Employee engagement improves steadily with training participation up to nearly 85 training hours, after which engagement levels begin to decline, indicating possible learning saturation or training fatigue.
-  
-          * Nearly 73% of employees fall within the Rapid Career Velocity segment, while only 5% show signs of career stagnation and 1% fall into the critical career risk category.
-  
-          * Productivity levels show a positive relationship with training hours, suggesting that workforce learning and capability development contribute positively to operational performance.
-  
-          * Almost half of the workforce (47%) falls within the Growth Potential segment, while development support is still required for 38% of employees.
-  
-          * Only 8% of employees currently qualify as Future Ready, while another 8% are classified under Career Stagnation Risk, highlighting opportunities for long-term workforce capability improvement.
-
 ## Key Insights:
 
-* Workforce productivity remained stable throughout the analysis period, with average productivity consistently maintained around the 86% level.
-* Nearly 96% of employees fall within the High or Very High productivity categories, reflecting a strong overall workforce performance profile.
-* Significant productivity variation exists across business units, grades, and locations, indicating differences in operational efficiency and workforce performance across the organization.
-* Machine learning analysis identified recent productivity trends (PROD_3M_SLOPE) as the strongest predictor of future productivity deterioration risk.
-* Higher overtime, low engagement, weaker KPI performance, poor manager ratings, low certifications, and compensation stagnation significantly increase productivity risk probability.
-* Strong managerial support, longer employee tenure, and stable recent productivity trends are associated with lower workforce productivity risk.
-* CFFP emerged as the highest-risk business unit, while EPD recorded the lowest overall productivity risk levels.
-* Productivity risk is concentrated within junior workforce grades, with the E9 grade in the ROD unit identified as the most critical workforce risk hotspot.
-* Workforce learning and development show a positive relationship with productivity performance, highlighting the impact of capability-building initiatives on operational outcomes.
-* While a large portion of employees demonstrate strong career growth potential, only a limited percentage currently qualify as Future Ready, indicating opportunities to strengthen long-term workforce capability and talent readiness.
+
 
 ## Recommendations:
 
-* Prioritize intervention strategies for high-risk workforce segments, particularly junior grades and critical operational hotspots such as the E9 workforce segment within the ROD unit, where productivity risk levels are significantly elevated.
-* Strengthen workforce engagement and managerial effectiveness initiatives, as low engagement, weaker KPI performance, and poor manager ratings emerged as major contributors to productivity deterioration risk.
-* Monitor overtime and workload pressure more closely to reduce long-term workforce sustainability risks and prevent productivity decline caused by operational fatigue.
-* Expand targeted learning and capability development programs, especially for employees classified under Development Required and Career Stagnation Risk segments, to improve long-term workforce readiness and productivity stability.
-* Develop a structured workforce growth and retention strategy focused on career progression, certifications, and compensation progression to reduce compensation stagnation risk and strengthen future workforce capability.
+
 
 ## Author:
 
